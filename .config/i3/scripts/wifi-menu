@@ -1,0 +1,22 @@
+#!/bin/zsh
+# wifi-menu
+
+notify-send -t 1000 "Getting WiFi networks..."
+
+rofi_theme="~/.config/rofi/wifi-menu.rasi"
+
+
+chosen_network=$(nmcli -g SSID device wifi | rofi -dmenu -i -p "Wifi network" -theme $rofi_theme )
+if [[ -z $chosen_network ]]; then
+    # If we have not chosen a network, the previous command will return an empty string
+    # and we can exit right away
+    exit 1
+fi
+
+nmcli connection show $chosen_network > /dev/null
+if [[ $? -eq 0 ]]; then
+     nmcli connection up id $chosen_network
+else
+     nmcli device wifi connect $chosen_network
+fi
+

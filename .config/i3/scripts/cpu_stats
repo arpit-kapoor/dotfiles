@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+usage=$(~/.config/i3/scripts/cpu_usage | awk 'NR=1 { print $1 }')
+temp=$(~/.config/i3/scripts/temperature | awk 'NR=1 { print $1 }')
+
+printf "%i %i" $usage $temp 
+# echo "$usage $temp"
