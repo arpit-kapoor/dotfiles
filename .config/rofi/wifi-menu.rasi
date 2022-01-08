@@ -1,0 +1,32 @@
+configuration {
+    font:                           "Sourcecode Pro Regular 10";
+    show-icons:                     false;
+    icon-theme: 		    "Arc-X-D";
+    scroll-method:                  0;
+    disable-history:                false;
+    sidebar-mode: 		    false;
+}
+
+@import "~/.config/rofi/default-menu.rasi"
+
+
+window {
+    background-color:               @background;
+    border:                         2;
+    padding:                        12;
+    transparency:                   "real";
+//   height: 			    100%;
+    width:                          240px;
+    location:                       center;
+    anchor:                         center;
+//    y-offset:                       28;
+    x-offset:	                    0;
+    transparency:                   "real";
+}
+
+listview {
+    lines:                          5;
+    columns:                        1;
+    scrollbar:                     false;
+    margin: 			    5px;
+}
