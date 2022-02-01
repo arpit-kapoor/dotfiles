@@ -566,4 +566,3 @@ bindsym $mod+c exec ~/.config/i3/scripts/monitor.sh disconnect
 bindsym Ctrl+$mod+Shift+l move workspace to output right
 bindsym Ctrl+$mod+Shift+h move workspace to output left
 
-
