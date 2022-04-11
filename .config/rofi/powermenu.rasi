@@ -3,7 +3,7 @@
  * Maintainer: joekamprad <joekamprad@endeavouros.com>
  *******************************************************/
 configuration {
-    font:                           "Sourcecode Pro Regular 10";
+    font:                           "Sourcecode Pro Regular 12";
     show-icons:                     false;
     icon-theme: 		    "Arc-X-D";
     scroll-method:                  0;
@@ -19,7 +19,7 @@ window {
     border:                         1;
     padding:                        10;
     transparency:                   "real";
-    width:                          340px;
+    width:                          200px;
     location:                       center;
     anchor:			    center;
 /*    y-offset:                       28;*/
@@ -27,8 +27,8 @@ window {
     transparency:                   "real";
 }
 listview {
-    lines:                          2;
-    columns:                        3;
+    lines:                          6;
+    columns:                        1;
     scrollbar:                     false;
 }
 element {

@@ -337,6 +337,8 @@ assign [class="Alacritty"] $ws1
 assign [class="(?i)firefox"] $ws2
 assign [class="Thunar"] $ws3
 assign [class="VSCodium"] $ws4
+assign [class="Code"] $ws4
+assign [class="RStudio"] $ws4
 assign [class="Ferdi"] $ws5
 assign [class="spotify"] $w6
 assign [class="Steam"] $ws7
@@ -349,6 +351,8 @@ for_window [class=Alacritty] focus
 for_window [class=(?i)firefox] focus
 for_window [class=Thunar] focus
 for_window [class=VSCodium] focus
+for_window [class=Code] focus
+for_window [class=RStudio] focus
 for_window [class=Steam] focus
 for_window [class=DesktopEditors] focus
 for_window [class=zoom] focus
@@ -403,7 +407,7 @@ exec --no-startup-id picom -b
 #exec --no-startup-id nm-applet
 
 # set wallpaper
-exec --no-startup-id nitrogen --restore
+# exec --no-startup-id nitrogen --restore
 #exec --no-startup-id feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros_i3.png
 
 # set powersavings for display:
@@ -417,6 +421,9 @@ exec --no-startup-id /home/arpitk/.dropbox-dist/dropboxd &
 
 ## Set KeyBoard preference
 exec --no-startup-id /home/arpitk/.config/i3/scripts/keyboard.sh
+
+## Set wallpaper
+exec --no-startup-id /home/arpitk/.config/i3/scripts/wallpaper.sh
 
 
 # Autostart apps as you like
@@ -565,4 +572,5 @@ bindsym $mod+c exec ~/.config/i3/scripts/monitor.sh disconnect
 ## Move workspaces between monitors
 bindsym Ctrl+$mod+Shift+l move workspace to output right
 bindsym Ctrl+$mod+Shift+h move workspace to output left
+
 

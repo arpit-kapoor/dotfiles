@@ -117,7 +117,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-conda activate std
+conda activate
 
 # Winetricks
 export WINEARCH=win64
@@ -154,6 +154,6 @@ eval "$(dircolors ~/.dircolors)";
 
 # Aliases
 alias vim=nvim
-alias code=codium
+# alias code=codium
 ## Alias for dotfiles config command
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
